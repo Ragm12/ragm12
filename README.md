@@ -28,4 +28,4 @@ Estoy especialmente interesado en herramientas que conecten datos, procesos come
 
 ## Conecta conmigo
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Rodrigo%20Gonzalez-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ragm12/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Rodrigo%20Grajales-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ragm12/)
