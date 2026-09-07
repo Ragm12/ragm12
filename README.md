@@ -19,32 +19,32 @@ He trabajado en operaciones para **Colombia, México y Chile**, desarrollando CR
 ### 🏢 Tu Casa Pro
 Aplicación para propiedad horizontal con asistente de IA, pagos, cartera, PQRS y gestión de zonas comunes.
 
-**Producto:** [tucasapro.app/co](https://tucasapro.app/co)
+[Producto](https://tucasapro.app/co) · [Caso de estudio](portfolio/tu-casa-pro.md)
 
 ### 🤖 Terixia
 Plataforma de servicios tecnológicos con asistente comercial de IA, generación de soluciones y cotizador digital.
 
-**Producto:** [terixia.com](https://terixia.com)
+[Producto](https://terixia.com) · [Caso de estudio](portfolio/terixia.md)
 
 ### ⚖️ Verixia
 Producto SaaS B2B legaltech desarrollado con Next.js, TypeScript, Supabase y Vercel, incluyendo APIs, dashboard, generación de reportes PDF y migraciones de base de datos.
 
-**Producto:** [verixia.app](https://www.verixia.app)
-
-### ☕ Café Moreno
-Tienda digital para una marca de café colombiano con selección de presentación, molienda, pedidos y experiencia comercial digital.
-
-**Producto:** [cafemoreno.co](https://www.cafemoreno.co)
+[Producto](https://www.verixia.app) · [Caso de estudio](portfolio/verixia.md)
 
 ### 🏭 LM Dotaciones
 Catálogo B2B y flujo de solicitudes de cotización. Arquitectura serverless con Cloudflare Workers, D1 y endpoints REST.
 
-**Producto:** [lmdotaciones.com](https://lmdotaciones.com)
+[Producto](https://lmdotaciones.com) · [Caso de estudio](portfolio/lm-dotaciones.md)
+
+### ☕ Café Moreno
+Tienda digital para una marca de café colombiano con selección de presentación, molienda, pedidos y experiencia comercial digital.
+
+[Producto](https://www.cafemoreno.co)
 
 ### 🧰 Manufacturas Mego
 Sitio comercial y catálogo digital para productos industriales y de seguridad.
 
-**Producto:** [manufacturasmego.com](https://manufacturasmego.com)
+[Producto](https://manufacturasmego.com)
 
 ## Stack técnico
 
