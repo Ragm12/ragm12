@@ -39,12 +39,12 @@ Catálogo B2B y flujo de solicitudes de cotización. Arquitectura serverless con
 ### ☕ Café Moreno
 Tienda digital para una marca de café colombiano con selección de presentación, molienda, pedidos y experiencia comercial digital.
 
-[Producto](https://www.cafemoreno.co)
+[Producto](https://www.cafemoreno.co) · [Caso de estudio](portfolio/cafe-moreno.md)
 
 ### 🧰 Manufacturas Mego
 Sitio comercial y catálogo digital para productos industriales y de seguridad.
 
-[Producto](https://manufacturasmego.com)
+[Producto](https://manufacturasmego.com) · [Caso de estudio](portfolio/manufacturas-mego.md)
 
 ## Stack técnico
 
