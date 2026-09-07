@@ -30,7 +30,7 @@ Producto propio. Trabajo de punta a punta desde definición de necesidades de ne
 
 ## Estado del código
 
-El proyecto se encuentra desplegado en ChatGPT Sites. El código fuente se mantendrá privado al migrarse a GitHub y, antes de cualquier publicación, se revisarán secretos, integraciones y configuración de producción.
+El producto está desplegado y operativo. El código fuente se conservará en un repositorio privado y, antes de cualquier publicación, se revisarán secretos, integraciones y configuración de producción.
 
 ## Qué demuestra
 
