@@ -1,31 +1,80 @@
-# Hola, soy Rodrigo 👋
+# Rodrigo Grajales 👋
 
-Soy un constructor full stack enfocado en CRM, automatizacion, flujos de datos y herramientas con IA para operaciones reales de negocio.
+### Software Engineer · AI & Automation · Full Stack · CRM / ERP
 
-Vengo del mundo comercial e inmobiliario, y me gusta convertir procesos complejos en software simple, util y funcional.
+Construyo productos y sistemas que conectan **software, datos, procesos comerciales e inteligencia artificial** para resolver problemas reales de operación.
 
-## En que estoy trabajando
+He trabajado en operaciones para **Colombia, México y Chile**, desarrollando CRM, ERP, automatizaciones, integraciones y agentes de IA desde el diagnóstico del proceso hasta su implementación y mejora continua.
 
-- CRM para flujos comerciales inmobiliarios
-- Recepcion y gestion de leads
-- Integraciones con WhatsApp, email y calendario
-- Cotizadores, dashboards y herramientas internas
-- Productos legaltech y validacion de antecedentes
+## Impacto profesional
 
-## Actualmente estoy aprendiendo y construyendo con
+- **98 % menos costo de CRM** mediante una solución desarrollada a la medida y la migración desde una herramienta genérica.
+- **80 % menos tiempo en campañas de contacto**, reduciendo un proceso de aproximadamente 5 horas a 1 hora.
+- **30 puntos porcentuales menos clientes sin respuesta**, pasando de 70 % a 40 %.
+- Desarrollo de **agentes de IA para contacto, cotizaciones y cobranza** integrados con procesos comerciales y APIs.
+- Construcción y gestión de soluciones de datos con **MongoDB, AWS, SQL, Metabase y dashboards operativos**.
 
-- TypeScript, React y Next.js
-- Python, FastAPI y arquitectura backend
-- PostgreSQL, Supabase y modelado de datos
-- Automatizaciones, integraciones y APIs
-- Agentes de IA y herramientas practicas para empresas
+## Proyectos seleccionados
 
-## Lo que me interesa construir
+### 🏢 Tu Casa Pro
+Aplicación para propiedad horizontal con asistente de IA, pagos, cartera, PQRS y gestión de zonas comunes.
 
-Me gustan los productos practicos, los sistemas limpios y el software que ayuda a los equipos a trabajar mejor.
+[Producto](https://tucasapro.app/co) · [Caso de estudio](portfolio/tu-casa-pro.md)
 
-Estoy especialmente interesado en herramientas que conecten datos, procesos comerciales y automatizacion para reducir trabajo manual y mejorar la toma de decisiones.
+### 🤖 Terixia
+Plataforma de servicios tecnológicos con asistente comercial de IA, generación de soluciones y cotizador digital.
 
-## Conecta conmigo
+[Producto](https://terixia.com) · [Caso de estudio](portfolio/terixia.md)
+
+### ⚖️ Verixia
+Producto SaaS B2B legaltech desarrollado con Next.js, TypeScript, Supabase y Vercel, incluyendo APIs, dashboard, generación de reportes PDF y migraciones de base de datos.
+
+[Producto](https://www.verixia.app) · [Caso de estudio](portfolio/verixia.md)
+
+### 🏭 LM Dotaciones
+Catálogo B2B y flujo de solicitudes de cotización. Arquitectura serverless con Cloudflare Workers, D1 y endpoints REST.
+
+[Producto](https://lmdotaciones.com) · [Caso de estudio](portfolio/lm-dotaciones.md)
+
+### ☕ Café Moreno
+Tienda digital para una marca de café colombiano con selección de presentación, molienda, pedidos y experiencia comercial digital.
+
+[Producto](https://www.cafemoreno.co) · [Caso de estudio](portfolio/cafe-moreno.md)
+
+### 🧰 Manufacturas Mego
+Sitio comercial y catálogo digital para productos industriales y de seguridad.
+
+[Producto](https://manufacturasmego.com) · [Caso de estudio](portfolio/manufacturas-mego.md)
+
+## Stack técnico
+
+**Desarrollo**  
+TypeScript · JavaScript · Python · React · Next.js · FastAPI · REST APIs
+
+**Datos**  
+PostgreSQL · SQL · MongoDB · Supabase · Metabase · Power BI
+
+**Cloud & infraestructura**  
+AWS · Vercel · Cloudflare Workers · Cloudflare D1
+
+**Automatización e IA**  
+Agentes de IA · Google Apps Script · Zapier · Selenium · integraciones API
+
+**CRM / ERP**  
+Kommo · Pipedrive · HubSpot · Odoo · soluciones CRM/ERP a medida
+
+## Qué construyo
+
+Me interesan especialmente los problemas donde hay que entender primero la operación y después decidir qué tecnología usar:
+
+- CRM y ERP a medida
+- agentes de IA para operaciones comerciales
+- automatización de procesos
+- aplicaciones SaaS
+- integraciones entre sistemas
+- plataformas internas y dashboards
+- productos que convierten trabajo manual en flujos medibles y escalables
+
+## Contacto
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Rodrigo%20Grajales-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ragm12/)
