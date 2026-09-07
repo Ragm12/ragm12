@@ -29,7 +29,7 @@ Desarrollo del producto digital y adaptación de necesidades comerciales a una s
 
 ## Estado del código
 
-El proyecto se encuentra desplegado en ChatGPT Sites. El código fuente se mantendrá privado al migrarse a GitHub y se revisará configuración, datos de contacto e integraciones antes de preparar cualquier versión pública.
+El producto está desplegado y operativo. El código fuente se conservará en un repositorio privado y se revisará configuración, datos de contacto e integraciones antes de preparar cualquier versión pública.
 
 ## Qué demuestra
 
