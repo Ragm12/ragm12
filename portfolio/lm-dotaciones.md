@@ -1,38 +1,82 @@
 # LM Dotaciones
 
-**Tipo:** Catálogo B2B y captación de cotizaciones  
+**Tipo:** Catálogo B2B, carrito y captación de cotizaciones  
 **Demo:** https://lmdotaciones.com
 
 ## Problema
 
-Digitalizar la presentación comercial de productos industriales y convertir el catálogo en un canal directo para solicitudes de cotización.
+Convertir un catálogo industrial en un canal comercial digital capaz de presentar productos, capturar solicitudes estructuradas y medir el funnel sin añadir infraestructura innecesaria para el tamaño del negocio.
 
 ## Solución
 
-Construí un sitio B2B con catálogo y flujo de cotizaciones sobre una arquitectura serverless, manteniendo la aplicación ligera y preparada para desplegarse en la red de Cloudflare.
+Construí una aplicación B2B sobre Cloudflare Workers, Static Assets y D1. El frontend sirve catálogo, filtros, visor y carrito; el Worker centraliza validación, persistencia, protección antispam, integración de correo y analítica de conversión.
 
 ## Stack
 
 - JavaScript / frontend web
 - Cloudflare Workers
 - Cloudflare Static Assets
-- Cloudflare D1
-- REST endpoints
+- Cloudflare D1 / SQLite
+- Wrangler
+- Cloudflare Turnstile
+- Integración de correo vía API
+
+## Arquitectura
+
+```text
+Navegador
+  ↓
+Cloudflare Edge
+  ├─ Static Assets → catálogo / UI
+  └─ Worker → `/api/*`
+       ├─ cotizaciones
+       ├─ carrito por correo
+       ├─ eventos de conversión
+       ├─ configuración
+       └─ health check
+            ↓
+       Cloudflare D1
+            ↓
+       Servicio de correo
+
+Cron diario → limpieza de eventos > 90 días
+```
 
 ## Componentes técnicos
 
-- Catálogo de productos
-- Filtros y navegación por categorías
-- Visor de producto
-- Formulario de cotización
-- Persistencia de solicitudes en D1
+- Catálogo, filtros y navegación por categorías.
+- Visor de producto y carrito.
+- Formulario general de cotización.
+- Cotización por carrito con múltiples productos.
+- Persistencia de solicitudes e items en D1.
+- Códigos de seguimiento generados en backend.
+- Protección Turnstile + honeypot.
+- Validación de correo, teléfono, campos y cantidades.
+- Queries parametrizadas a D1.
+- Allowlist de eventos de conversión.
+- Analítica propia de funnel y retención automática de 90 días.
+- Endpoint de salud para operación.
+- Integración externa para confirmaciones por correo.
+- Esquema SQL y migraciones versionadas.
+
+## Endpoints principales
+
 - `POST /api/cotizaciones`
+- `POST /api/carrito-correo`
+- `POST /api/eventos`
+- `GET /api/configuracion`
 - `GET /api/salud`
-- Migraciones y esquema SQL
-- Flujo de despliegue con Wrangler
+
+## Decisiones relevantes
+
+- Un único Worker mantiene baja la complejidad operativa.
+- Static Assets y el edge de Cloudflare sirven el frontend sin backend dedicado.
+- La solicitud se persiste antes de intentar el envío de correo, evitando perder el lead si falla la integración externa.
+- La analítica acepta únicamente eventos definidos por el backend.
+- La configuración de producción permanece fuera del showcase público.
 
 ## Qué demuestra
 
-Este proyecto muestra experiencia construyendo una solución comercial completa con frontend, backend serverless, persistencia, APIs y despliegue, además de iteración continua sobre UX y catálogo.
+Este proyecto evidencia un flujo completo **frontend → edge backend → validación → base de datos → integración externa → analítica**, aplicado a un negocio B2B real y con iteración continua de UX.
 
-> El repositorio principal se mantiene privado. Este caso de estudio documenta únicamente arquitectura y funcionalidades no sensibles.
+> El repositorio de producción se mantiene privado porque contiene configuración específica del despliegue. Este caso de estudio expone únicamente arquitectura y funcionalidades no sensibles.
