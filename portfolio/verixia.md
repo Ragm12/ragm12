@@ -25,24 +25,26 @@ La búsqueda jurídica actual funciona como flujo **piloto/demostrativo** para v
 
 ## Arquitectura
 
-```text
-Usuario
-  ↓
-Next.js App Router
-  ├─ landing / login / dashboard / demo
-  ├─ contacto
-  └─ reportes
-       ↓
-API server-side
-  ├─ contacto
-  ├─ reports / PDF
-  └─ legal
-      ├─ search piloto
-      ├─ history
-      ├─ reports
-      └─ AI summary
-       ↓
-Supabase + migraciones
+```mermaid
+flowchart TD
+    U[Usuario] --> APP[Next.js App Router]
+    APP --> WEB[Landing · Login · Dashboard · Demo]
+    APP --> CONTACT[Contacto]
+    APP --> REPORTS[Reportes]
+    CONTACT --> API[API server-side]
+    REPORTS --> API
+    WEB --> API
+    API --> CONTACTAPI[Contacto]
+    API --> PDF[Reportes / PDF]
+    API --> LEGAL[Legal]
+    LEGAL --> SEARCH[Búsqueda piloto]
+    LEGAL --> HISTORY[Historial]
+    LEGAL --> LEGALREPORTS[Reportes]
+    LEGAL --> AI[Resumen IA + fallback]
+    CONTACTAPI --> DB[(Supabase / Postgres)]
+    PDF --> DB
+    HISTORY --> DB
+    LEGALREPORTS --> DB
 ```
 
 ## Componentes técnicos

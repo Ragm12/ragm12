@@ -23,23 +23,24 @@ Construí una aplicación B2B sobre Cloudflare Workers, Static Assets y D1. El f
 
 ## Arquitectura
 
-```text
-Navegador
-  ↓
-Cloudflare Edge
-  ├─ Static Assets → catálogo / UI
-  └─ Worker → `/api/*`
-       ├─ cotizaciones
-       ├─ carrito por correo
-       ├─ eventos de conversión
-       ├─ configuración
-       └─ health check
-            ↓
-       Cloudflare D1
-            ↓
-       Servicio de correo
-
-Cron diario → limpieza de eventos > 90 días
+```mermaid
+flowchart TD
+    U[Usuario] --> EDGE[Cloudflare Edge]
+    EDGE --> ASSETS[Static Assets]
+    EDGE --> WORKER[Worker /api]
+    ASSETS --> UI[Catálogo · Filtros · Visor · Carrito]
+    WORKER --> QUOTE[Cotizaciones]
+    WORKER --> CART[Carrito por correo]
+    WORKER --> EVENTS[Eventos de conversión]
+    WORKER --> CONFIG[Configuración pública]
+    WORKER --> HEALTH[Health check]
+    QUOTE --> DB[(Cloudflare D1)]
+    CART --> DB
+    EVENTS --> DB
+    QUOTE --> MAIL[Servicio de correo]
+    CART --> MAIL
+    CRON[Cron diario] --> CLEAN[Retención 90 días]
+    CLEAN --> DB
 ```
 
 ## Componentes técnicos

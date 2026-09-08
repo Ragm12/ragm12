@@ -13,23 +13,25 @@ Construí una aplicación web interna sobre Google Apps Script. El mismo deploym
 
 ## Arquitectura
 
-```text
-Usuario autenticado con Google
-        ↓
-Google Apps Script Web App
-        ↓
-`doGet` / `doPost`
-        ├─ HTML Service
-        └─ Router interno de API
-                ↓
-        Servicios por dominio
-        ├─ cuentas
-        ├─ balances
-        ├─ analítica
-        ├─ metas
-        └─ recurrentes
-                ↓
-        Google Sheets
+```mermaid
+flowchart TD
+    U[Usuario con cuenta Google] --> AUTH[Sesión + whitelist]
+    AUTH --> APP[Google Apps Script Web App]
+    APP --> GET[doGet]
+    APP --> POST[doPost]
+    GET --> UI[HTML Service]
+    GET --> ROUTER[Router interno]
+    POST --> ROUTER
+    ROUTER --> ACC[Cuentas]
+    ROUTER --> BAL[Balances]
+    ROUTER --> ANA[Analítica]
+    ROUTER --> GOALS[Metas]
+    ROUTER --> REC[Recurrentes]
+    ACC --> SHEETS[(Google Sheets)]
+    BAL --> SHEETS
+    ANA --> SHEETS
+    GOALS --> SHEETS
+    REC --> SHEETS
 ```
 
 ## Funcionalidades técnicas
