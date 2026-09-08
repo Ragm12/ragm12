@@ -59,6 +59,17 @@ flowchart TD
 - Migraciones de base de datos versionadas.
 - Documentación de despliegue, incidentes, changelog y releases.
 
+## Calidad automatizada
+
+El repositorio privado ejecuta un pipeline de GitHub Actions antes de integrar cambios:
+
+- chequeo preventivo de secretos y archivos de entorno;
+- `tsc --noEmit` para validar TypeScript;
+- ESLint;
+- prueba automática de confidencialidad de reportes;
+- build de producción;
+- actualizaciones de dependencias gestionadas con Dependabot y validadas por el mismo pipeline.
+
 ## Decisiones relevantes
 
 - Las API keys y service-role keys permanecen server-side.
@@ -68,6 +79,6 @@ flowchart TD
 
 ## Qué demuestra
 
-Este proyecto evidencia trabajo **full stack de producto**: frontend, APIs, datos, migraciones, integración de IA, generación de documentos, despliegue y operación.
+Este proyecto evidencia trabajo **full stack de producto**: frontend, APIs, datos, migraciones, integración de IA, generación de documentos, despliegue, calidad automatizada y operación.
 
 > El repositorio principal se mantiene privado. Este caso de estudio expone únicamente arquitectura y decisiones técnicas no sensibles.
