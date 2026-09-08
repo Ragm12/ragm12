@@ -36,6 +36,11 @@ Catálogo B2B y flujo de solicitudes de cotización. Arquitectura serverless con
 
 [Producto](https://lmdotaciones.com) · [Caso de estudio](portfolio/lm-dotaciones.md)
 
+### 💳 Tambit
+Aplicación interna de gestión financiera sobre Google Apps Script, con routing, autenticación, servicios por dominio y persistencia en Google Sheets.
+
+[Caso de estudio](portfolio/tambit.md)
+
 ### ☕ Café Moreno
 Tienda digital para una marca de café colombiano con selección de presentación, molienda, pedidos y experiencia comercial digital.
 
