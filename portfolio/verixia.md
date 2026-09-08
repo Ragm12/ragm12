@@ -15,7 +15,7 @@ La búsqueda jurídica actual funciona como flujo **piloto/demostrativo** para v
 
 ## Stack
 
-- Next.js 16 / React 19
+- Next.js 16.3.4 / React 19.2.8
 - TypeScript
 - Tailwind CSS 4
 - Supabase / Postgres
@@ -67,6 +67,8 @@ El repositorio privado ejecuta un pipeline de GitHub Actions antes de integrar c
 - `tsc --noEmit` para validar TypeScript;
 - ESLint;
 - prueba automática de confidencialidad de reportes;
+- **4 pruebas con `node:test`** sobre validación y comportamiento del fallback de IA;
+- verificación de que el fallback limite y filtre hallazgos y conserve el aviso de revisión humana;
 - build de producción;
 - actualizaciones de dependencias gestionadas con Dependabot y validadas por el mismo pipeline.
 
@@ -74,11 +76,14 @@ El repositorio privado ejecuta un pipeline de GitHub Actions antes de integrar c
 
 - Las API keys y service-role keys permanecen server-side.
 - La IA interpreta información entregada por el sistema; no debe inventar hechos.
+- Si el proveedor de IA falla, el sistema mantiene un fallback determinista y evita exponer al cliente el detalle crudo del error externo.
+- React y ReactDOM se actualizan como un stack coordinado para evitar incompatibilidades de peer dependencies.
+- Next.js y `eslint-config-next` se mantienen alineados y sus actualizaciones pasan por CI antes de integrarse.
 - El motor de búsqueda está desacoplado de la experiencia de reportes para poder sustituir el mock por proveedores/fuentes verificables.
 - El repositorio incluye documentación operativa, no solo código de interfaz.
 
 ## Qué demuestra
 
-Este proyecto evidencia trabajo **full stack de producto**: frontend, APIs, datos, migraciones, integración de IA, generación de documentos, despliegue, calidad automatizada y operación.
+Este proyecto evidencia trabajo **full stack de producto**: frontend, APIs, datos, migraciones, integración de IA, generación de documentos, despliegue, pruebas, seguridad y operación.
 
 > El repositorio principal se mantiene privado. Este caso de estudio expone únicamente arquitectura y decisiones técnicas no sensibles.

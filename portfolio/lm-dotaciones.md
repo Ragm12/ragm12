@@ -17,7 +17,7 @@ Construí una aplicación B2B sobre Cloudflare Workers, Static Assets y D1. El f
 - Cloudflare Workers
 - Cloudflare Static Assets
 - Cloudflare D1 / SQLite
-- Wrangler
+- Wrangler 4
 - Cloudflare Turnstile
 - Integración de correo vía API
 
@@ -75,7 +75,11 @@ El repositorio privado tiene un pipeline de GitHub Actions que valida cada cambi
 - chequeo preventivo de secretos y archivos de entorno;
 - auditoría de dependencias de runtime;
 - checks de sintaxis;
-- **8 pruebas automáticas** con `node:test` sobre rutas, configuración, health, validaciones, allowlist de eventos y Static Assets;
+- **12 pruebas automáticas** con `node:test`;
+- cobertura de configuración pública y health check;
+- validación de métodos, payloads y allowlist de eventos;
+- pruebas de Turnstile para token faltante y hostname no permitido;
+- prueba del flujo completo **Turnstile → D1 → mailer → código de solicitud** usando servicios simulados y sin secretos reales;
 - dry build del Worker con Wrangler;
 - actualizaciones de dependencias mediante Dependabot, sujetas al mismo CI antes de integrarse.
 
@@ -85,10 +89,11 @@ El repositorio privado tiene un pipeline de GitHub Actions que valida cada cambi
 - Static Assets y el edge de Cloudflare sirven el frontend sin backend dedicado.
 - La solicitud se persiste antes de intentar el envío de correo, evitando perder el lead si falla la integración externa.
 - La analítica acepta únicamente eventos definidos por el backend.
+- Los fixtures de pruebas no contienen secretos y el escáner preventivo se mantiene estricto.
 - La configuración de producción permanece fuera del showcase público.
 
 ## Qué demuestra
 
-Este proyecto evidencia un flujo completo **frontend → edge backend → validación → base de datos → integración externa → analítica**, aplicado a un negocio B2B real y con pruebas/CI automatizados.
+Este proyecto evidencia un flujo completo **frontend → edge backend → validación → protección antispam → base de datos → integración externa → analítica**, aplicado a un negocio B2B real y con pruebas/CI automatizados.
 
 > El repositorio de producción se mantiene privado porque contiene configuración específica del despliegue. Este caso de estudio expone únicamente arquitectura y funcionalidades no sensibles.
