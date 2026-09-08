@@ -51,6 +51,18 @@ flowchart TD
 - asociación de movimientos a cuentas;
 - validación de propiedad de registros por usuario.
 
+## Calidad automatizada
+
+El repositorio privado ejecuta un pipeline de GitHub Actions orientado a controles estáticos seguros para Apps Script:
+
+- secret scan preventivo;
+- validación de sintaxis con `node --check` sobre todos los archivos JavaScript;
+- parseo automático de `appsscript.json` y `.clasp.json`;
+- control de higiene del repositorio;
+- `.gitignore` para archivos de entorno, logs, temporales y artefactos del sistema operativo.
+
+Estos checks no ejecutan lógica dependiente de Google Sheets ni modifican el deployment; sirven como barrera previa para detectar errores de sintaxis, configuración o publicación accidental de secretos.
+
 ## Decisiones técnicas
 
 - Apps Script reduce infraestructura para una herramienta interna integrada al ecosistema Google.
@@ -60,7 +72,7 @@ flowchart TD
 
 ## Seguridad y límites
 
-El repositorio principal se mantiene privado porque contiene configuración específica del entorno.
+El repositorio principal se mantiene privado porque contiene configuración específica del entorno y cuenta con una política de seguridad versionada.
 
 Antes de una versión pública se debe:
 
@@ -72,6 +84,6 @@ Antes de una versión pública se debe:
 
 ## Qué demuestra
 
-Tambit muestra experiencia construyendo herramientas internas y automatizaciones de negocio más allá de un frontend tradicional: routing, autorización, persistencia, servicios, reglas financieras y diseño de una arquitectura proporcional al problema.
+Tambit muestra experiencia construyendo herramientas internas y automatizaciones de negocio más allá de un frontend tradicional: routing, autorización, persistencia, servicios, reglas financieras, controles de calidad y diseño de una arquitectura proporcional al problema.
 
 > El código de producción permanece privado. Este caso de estudio expone únicamente arquitectura y decisiones técnicas no sensibles.
