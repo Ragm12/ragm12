@@ -68,6 +68,17 @@ flowchart TD
 - `GET /api/configuracion`
 - `GET /api/salud`
 
+## Calidad automatizada
+
+El repositorio privado tiene un pipeline de GitHub Actions que valida cada cambio con:
+
+- chequeo preventivo de secretos y archivos de entorno;
+- auditoría de dependencias de runtime;
+- checks de sintaxis;
+- **8 pruebas automáticas** con `node:test` sobre rutas, configuración, health, validaciones, allowlist de eventos y Static Assets;
+- dry build del Worker con Wrangler;
+- actualizaciones de dependencias mediante Dependabot, sujetas al mismo CI antes de integrarse.
+
 ## Decisiones relevantes
 
 - Un único Worker mantiene baja la complejidad operativa.
@@ -78,6 +89,6 @@ flowchart TD
 
 ## Qué demuestra
 
-Este proyecto evidencia un flujo completo **frontend → edge backend → validación → base de datos → integración externa → analítica**, aplicado a un negocio B2B real y con iteración continua de UX.
+Este proyecto evidencia un flujo completo **frontend → edge backend → validación → base de datos → integración externa → analítica**, aplicado a un negocio B2B real y con pruebas/CI automatizados.
 
 > El repositorio de producción se mantiene privado porque contiene configuración específica del despliegue. Este caso de estudio expone únicamente arquitectura y funcionalidades no sensibles.
