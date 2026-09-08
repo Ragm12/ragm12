@@ -6,6 +6,8 @@ Construyo productos y sistemas que conectan **software, datos, procesos comercia
 
 He trabajado en operaciones para **Colombia, México y Chile**, desarrollando CRM, ERP, automatizaciones, integraciones y agentes de IA desde el diagnóstico del proceso hasta su implementación y mejora continua.
 
+**Enfoque:** negocio → proceso → datos → software → automatización → IA.
+
 ## Impacto profesional
 
 - **98 % menos costo de CRM** mediante una solución desarrollada a la medida y la migración desde una herramienta genérica.
@@ -27,12 +29,12 @@ Plataforma de servicios tecnológicos con asistente comercial de IA, generación
 [Producto](https://terixia.com) · [Caso de estudio](portfolio/terixia.md)
 
 ### ⚖️ Verixia
-Producto SaaS B2B legaltech desarrollado con Next.js, TypeScript, Supabase y Vercel, incluyendo APIs, dashboard, generación de reportes PDF y migraciones de base de datos.
+Producto SaaS B2B legaltech desarrollado con Next.js, TypeScript, Supabase y Vercel, incluyendo APIs, dashboard, generación de reportes PDF, pruebas automatizadas y migraciones de base de datos.
 
 [Producto](https://www.verixia.app) · [Caso de estudio](portfolio/verixia.md)
 
 ### 🏭 LM Dotaciones
-Catálogo B2B y flujo de solicitudes de cotización. Arquitectura serverless con Cloudflare Workers, D1 y endpoints REST.
+Catálogo B2B y flujo de solicitudes de cotización. Arquitectura serverless con Cloudflare Workers, D1, Turnstile, endpoints REST y pruebas automatizadas.
 
 [Producto](https://lmdotaciones.com) · [Caso de estudio](portfolio/lm-dotaciones.md)
 
@@ -50,6 +52,20 @@ Tienda digital para una marca de café colombiano con selección de presentació
 Sitio comercial y catálogo digital para productos industriales y de seguridad.
 
 [Producto](https://manufacturasmego.com) · [Caso de estudio](portfolio/manufacturas-mego.md)
+
+## Prácticas de ingeniería
+
+En los proyectos con código centralizado aplico prácticas orientadas a que el software sea mantenible y seguro, no solo funcional:
+
+- **CI con GitHub Actions** para validar cambios antes de integrarlos.
+- **Type checking, linting, tests y builds de producción** como controles automáticos.
+- **Secret scanning** y configuración sensible fuera del repositorio.
+- **Dependabot** con actualizaciones integradas únicamente después de pasar CI.
+- Migraciones y esquemas de datos versionados cuando el proyecto usa persistencia.
+- Separación entre **código privado** y **casos de estudio públicos** para mostrar arquitectura y decisiones sin exponer información sensible.
+- Documentación de arquitectura, despliegue, cambios e incidentes cuando el alcance del producto lo requiere.
+
+Los casos de estudio de [Verixia](portfolio/verixia.md) y [LM Dotaciones](portfolio/lm-dotaciones.md) muestran ejemplos concretos de estas prácticas.
 
 ## Stack técnico
 
